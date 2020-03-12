@@ -1,0 +1,17 @@
+div {
+    border : 7px solid rgb(186,218,85);
+    width : 700px;
+    padding: 60px 30px;
+    margin : 30px;
+}
+ul {
+    font-size: 30px;
+    line-height: 3;
+    list-style: none;
+}
+
+h1 {
+    font-size: 60px;
+    font-weight: 400;
+    padding : 0px 30px;
+}
