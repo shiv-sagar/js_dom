@@ -1,6 +1,23 @@
 var quotes;
 
 // Write your code here
+let displayQuote = document.querySelector(".quote");
+let displayQuoteAuthor = document.querySelector(".quoteAuthor");
+
+//function changeQuote() will be called after subscribing event keyup on document 
+
+document.addEventListener("keyup", changeQuote);
+
+//manipulation
+
+function changeQuote(e) {
+    if(e.target.keycode === 32) {
+        let randomI = Math.floor(Math.random() * quotes.length-1)
+
+        displayQuote.innerHTML = `${quotes[randomI].quoteText}`
+    }
+}
+
 
 
 

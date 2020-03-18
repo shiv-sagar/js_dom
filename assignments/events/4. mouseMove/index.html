@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+
+</head>
+<body>
+    <div class ="div">
+        <h1>Move Mouse Cursor</h1>
+        <ul class ="ul">
+            <li class = "screenx">0</li>
+            <li class = "screeny">0</li>
+            <li class = "clientx">0</li>
+            <li class = "clienty">0</li>
+            
+        </ul>
+    </div>
+<script>
+    //selection
+
+    let div = document.querySelector(".div");
+    let ul = document.querySelector(".ul");
+    let h1 = document.querySelector("h1");
+
+    //display() function will be called after subscribing mousemove event on div 
+
+    div.addEventListener("mousemove", display);
+
+    //manipulation
+
+    function display(e) {
+        let screenx = document.querySelector(".screenx");
+        screenx.innerHTML = e.screenX;
+
+        let screeny = document.querySelector(".screeny");
+        screeny.innerHTML = e.screenY;
+
+        let clientx = document.querySelector(".clientx");
+        clientx.innerHTML = e.clientX;
+
+        let clienty = document.querySelector(".clienty");
+        clienty.innerHTML = e.clientY;
+    }
+</script>
+    
+</body>
+</html>
